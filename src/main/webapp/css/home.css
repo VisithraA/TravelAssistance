@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+body{
+	background-color: 1px solid #f6dcdc;
+}
+
+.topDisplay{
+	background-image: url("../img/homebackground.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "Arimo", sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 80vh;
+	box-sizing: border-box;	
+}
+
+.button {
+	padding: 8px 10px;
+	text-decoration: none;
+	border-radius: 10px;
+	color: #fff; 
+	margin:10px;
+	box-sizing: border-box;
+	border: 1px solid #f6dcdc;
+}
+
+.button :hover{
+	
+}
+
+.navButtonContainer {
+	text-align:right;
+	padding: 20px;
+}

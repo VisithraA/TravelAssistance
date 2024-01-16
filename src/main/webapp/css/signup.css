@@ -3,7 +3,8 @@
 body {
 	display: flex;
 	justify-content: center;
-	align-items: center; background-image : url("../img/background1.jpg");
+	align-items: center;
+	background-image : url("../img/background1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: "Arimo", sans-serif;

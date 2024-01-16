@@ -12,13 +12,20 @@ public class Repository {
 	private static Repository repository;
 	private Connection connection;
 
-	public Repository() {
+	private Repository() {
+		String url = "jdbc:mysql://localhost:3306/travel_assistance";
+		String userName = "root";
+		String password = "root";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/travel_assistance", "root", "root");
+			connection = DriverManager.getConnection(url, userName, password);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Connection getConnection() {
+		return connection;
 	}
 
 	public static Repository getInstance() {
@@ -37,6 +44,7 @@ public class Repository {
 			preparedStatement.setString(3, user.getEmail());
 			preparedStatement.setString(4, user.getPhone());
 			preparedStatement.setString(5, user.getPassword());
+			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
