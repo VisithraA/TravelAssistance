@@ -14,7 +14,13 @@
 			<a href="login.jsp" class="button">Login</a> 
 			<a href="signup.jsp"class="button">Signup</a>
 			<a href="#"class="button">Contact Us</a>
-		</div>
+			</div>
+			<%String signupMessage=(String)request.getAttribute("signupMessage"); %>
+			<% if (signupMessage != null) { %>
+        	<script>
+            	alert("<%= signupMessage %>");
+       	 	</script>
+    		<% } %>
 		</div>
 	</div>
 </body>

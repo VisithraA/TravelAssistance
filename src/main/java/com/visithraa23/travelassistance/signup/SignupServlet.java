@@ -17,7 +17,6 @@ public class SignupServlet extends HttpServlet {
 	private Repository repository;
 	private static final long serialVersionUID = 1L;
 
-	
 	public SignupServlet() {
 		repository = Repository.getInstance();
 	}
@@ -29,16 +28,25 @@ public class SignupServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 		String password = request.getParameter("password");
-
 		User user = new User(firstName, lastName, email, phone, password);
-		repository.addUser(user);
-//		boolean userExists = repository.checkIfUserPresent(user);
-//		if (userExists) {
-//			
-//		} else {
-//			boolean signupSuccess = repository.addUser(user);
-//			
-//		}
+
+		boolean userExists = repository.checkIfUserPresent(user);
+		if (userExists) {
+			request.setAttribute("signupMessage", "User Already Exist");
+			RequestDispatcher reqDispatcher= request.getRequestDispatcher("signup.jsp");
+			reqDispatcher.forward(request, response);
+		} else {
+			boolean signupSuccess = repository.addUser(user);
+			if (signupSuccess) {
+				request.setAttribute("signupMessage", "Signup Successful");
+				RequestDispatcher reqDispatcher= request.getRequestDispatcher("home.jsp");
+				reqDispatcher.forward(request, response);
+			} else {
+				request.setAttribute("signupMessage", "Signup not Successful Try Later..");
+				RequestDispatcher reqDispatcher= request.getRequestDispatcher("home.jsp");
+				reqDispatcher.forward(request, response);
+			}
+		}
 
 	}
 

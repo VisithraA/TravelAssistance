@@ -52,20 +52,36 @@ public class Repository {
 	}
 
 	public boolean checkIfUserPresent(User user) {
-		String checkUser = "SELECT COUNT(*) FROM users WHERE Email = ? OR Phone=?";
+		String checkUser = "SELECT COUNT(*) FROM user WHERE Email = ? OR Phone=?";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(checkUser);
 			preparedStatement.setString(1, user.getEmail());
 			preparedStatement.setString(2, user.getPhone());
 			ResultSet resultSet = preparedStatement.executeQuery();
-			int countUser = resultSet.getInt(1);
-			if (countUser > 0)
-				return true;
+			if (resultSet.next()) {
+				int countUser = resultSet.getInt(1);
+				return countUser > 0;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return false;
-
 	}
 
+	public User checkIfUserEmailPresent(User user) {
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement("Select * from user where Email=?");
+			preparedStatement.setString(1, user.getEmail());
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while(resultSet.next()) {
+				String password=resultSet.getString("password");
+				String email=resultSet.getString("email");
+				User userPresent=new User(email,password);
+				return userPresent;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

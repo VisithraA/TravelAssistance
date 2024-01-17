@@ -22,10 +22,14 @@
 					type="submit" value="signup"> <a href="login.jsp">Already
 					have Account? Login</a>
 			</form>
-
 		</div>
+		<%String signupMessage=(String)request.getAttribute("signupMessage"); %>
+		<% if (signupMessage != null) { %>
+        <script>
+            alert("<%= signupMessage %>");
+       	 </script>
+    	<% } %>
 	</div>
-
 </body>
 </html>
 

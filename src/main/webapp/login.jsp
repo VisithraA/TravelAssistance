@@ -11,7 +11,7 @@
 	<div class=" loginbox box">
 			<h1>Login</h1>
 			<form action="login" method="post">
-				<label>Username</label>
+				<label>UserName</label>
 				<input type="text" name="email" required >
 				<br>
 				<label>Password</label>
@@ -23,6 +23,12 @@
 				<br>
 				<a href="signup.jsp">Create New Account</a>
 			</form>
+			<%String loginMessage=(String)request.getAttribute("loginMessage"); %>
+			<% if (loginMessage != null) { %>
+        	<script>
+         	   alert("<%= loginMessage %>");
+       	 	</script>
+    		<% } %>
 	</div>
 </body>
 </html>
