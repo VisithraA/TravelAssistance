@@ -22,6 +22,40 @@
        	 	</script>
     		<% } %>
 		</div>
-	</div>
+		
+    <div class="destinationsDisplay" >
+    		<h2>Top Places for Visit</h2>
+    		<div class="destination">
+        		<div class="destination-item">
+            	<p>Dubai</p>
+            	<a href="login.jsp"><img alt="dubai" src="img/Dubai.jpg"></a>
+        	</div>
+       	 	<div class="destination-item">
+            	<p>Thailand</p>
+            	<a><img alt="thailand" src="img/Thailand.jpg"></a>
+        	</div>
+        	<div class="destination-item">
+            	<p>Singapore</p>
+            	<a><img alt="singapore" src="img/Singapore.jpg"></a>
+        	</div>
+    		</div>
+			
+    		<div class="destination">
+        	<div class="destination-item">
+            	<p>Paris</p>
+            	<a><img alt="paris" src="img/Paris.jpg"></a>
+        	</div>
+        	<div class="destination-item">
+            	<p>NewYork</p>
+            	<a><img alt="newyork" src="img/NewYork.jpg"></a>
+        	</div>
+        	<div class="destination-item">
+            	<p>Maldives</p>
+            	<a><img alt="maldives" src="img/Maldives.jpg"></a>
+        	</div>
+    		</div>
+    	</div>
+    </div>
+    
 </body>
 </html>
