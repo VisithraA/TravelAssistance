@@ -6,7 +6,7 @@ body {
 
 /***********Display1***********/
 .topDisplay {
-	background-image: url("../img/Background1.jpg");
+	background-image: url("../img/Home/Background1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: "Arimo", sans-serif;

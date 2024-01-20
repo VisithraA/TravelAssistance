@@ -28,30 +28,30 @@
     		<div class="destination">
         		<div class="destination-item">
             	<p>Dubai</p>
-            	<a href="login.jsp"><img alt="dubai" src="img/Dubai.jpg"></a>
+            	<a href="destinationlist?place=Dubai"><img alt="dubai" src="img/Home/Dubai.jpg"></a>
         	</div>
        	 	<div class="destination-item">
             	<p>Thailand</p>
-            	<a><img alt="thailand" src="img/Thailand.jpg"></a>
+            	<a href="destinationlist?place=Thailand"><img alt="thailand" src="img/Home/Thailand.jpg"></a>
         	</div>
         	<div class="destination-item">
             	<p>Singapore</p>
-            	<a><img alt="singapore" src="img/Singapore.jpg"></a>
+            	<a href="destinationlist?place=Singapore"><img alt="singapore" src="img/Home/Singapore.jpg"></a>
         	</div>
     		</div>
 			
     		<div class="destination">
         	<div class="destination-item">
             	<p>Paris</p>
-            	<a><img alt="paris" src="img/Paris.jpg"></a>
+            	<a href="destinationlist?place=Paris"><img alt="paris" src="img/Home/Paris.jpg"></a>
         	</div>
         	<div class="destination-item">
             	<p>NewYork</p>
-            	<a><img alt="newyork" src="img/NewYork.jpg"></a>
+            	<a href="destinationlist?place=NewYork"><img alt="newyork" src="img/Home/NewYork.jpg"></a>
         	</div>
         	<div class="destination-item">
             	<p>Maldives</p>
-            	<a><img alt="maldives" src="img/Maldives.jpg"></a>
+            	<a href="destinationlist?place=Maldives"><img alt="maldives" src="img/Home/Maldives.jpg"></a>
         	</div>
     		</div>
     	</div>

@@ -4,7 +4,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image : url("../img/Background1.jpg");
+	background-image : url("../img/Home/Background1.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: "Arimo", sans-serif;
@@ -12,7 +12,7 @@ body {
 	padding: 0;
 	height: 100vh;
 	box-sizing: border-box;
-	background-image: url("../img/Background1.jpg");
+	background-image: url("../img/Home/Background1.jpg");
 }
 
 .loginbox {

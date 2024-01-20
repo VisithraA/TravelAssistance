@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
+import com.visithraa23.travelassistance.dto.Destination;
 import com.visithraa23.travelassistance.dto.User;
 
 public class Repository {
@@ -33,6 +35,9 @@ public class Repository {
 			repository = new Repository();
 		return repository;
 	}
+	
+	
+//					---------------------------------User--------------------------------------
 
 	public boolean addUser(User user) {
 
@@ -83,5 +88,22 @@ public class Repository {
 			e.printStackTrace();
 		}
 		return null;
+	}	
+	
+//					-------------------------------------Destination---------------------------------------------
+	
+	public ResultSet getPlacesInDestination(String clickedDestination) {
+		try {
+			PreparedStatement preparedStatement=connection.prepareStatement("select * from destinationlist where location=?");
+			preparedStatement.setString(1, clickedDestination);
+			ResultSet resultSet= preparedStatement.executeQuery();
+			//System.out.println(resultSet);
+			return resultSet;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
+	
 }
